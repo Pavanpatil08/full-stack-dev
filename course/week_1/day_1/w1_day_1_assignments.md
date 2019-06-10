@@ -9,14 +9,9 @@ Clone the following Data Repository, https://github.com/masai-school/assignments
 There is a file called `random_ids.txt` in `data/junk` Folder. Count the number of times the word `masai` occurs in that file.
 
 ```
-# Type Your Answer Below This Line
+using grep i used the following comand to find the word masai in the file random_ids.txt
+grep -o -i masai random_ids.txt | wc -l.
 ```
-
-```
-# How did you do it ?
-# Type Your Answer Below This Line
-```
-
 ## FSD.W1.1.B (10 min)
 
 Organize the food items into their respective folders. The `data/food` folder contains a list of food items which are fruits, vegetables and meat.  
@@ -24,14 +19,11 @@ Organise (move) them into their respective folders inside the `food` folder.
 The names of the respective folders should be `fruits` `vegetables` `meats`.
 
 ```
-# Assume that you are in the `food` folder in the terminal
-# Type Your Answer Below This Line
-<COMMAND 1>
-<COMMAND 2>
-<COMMAND 3>
-.
-.
-.
+created a folder using mkdir command and used the following code to sort the items and shift to their particular folders such as fruits, vegetables and meat.
+for file in $(ls -d -- *fruit* | sort -t. -k2); 
+do 
+mv $file /fruits; 
+done
 ```
 
 ## FSD.W1.1.C (10 min)
