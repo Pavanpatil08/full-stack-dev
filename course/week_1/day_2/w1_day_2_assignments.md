@@ -27,9 +27,8 @@ The files contains marks the data of 2000 students from India and Pakistan one f
 ```
 1. Find the total number of students from India
 
-```
-ANSWER
-```
+ANSWER 
+1500
 
 Commands on how you got the answer
 
@@ -41,37 +40,44 @@ Commands on how you got the answer
 2. No of students from Pakistan who are in top 100 list based on the marks scored
 ```
 ANSWER
+28
 ```
 
 Commands on how you got the answer
 
 ```
-<COMMAND 1>
+<COMMAND 1>$ head -n 100 pak1.txt
 <COMMAND 2>
 <COMMAND 3>
 ```
 3. Top 3 students from India based on the marks scored
 ```
 ANSWER
-```
+```99 India 6cf9c9be70765c6c741bd60a
+99 India 6cf9c9be70765c6c741bd5aa
+99 India 6cf9c9be70765c6c741bd577
 
 Commands on how you got the answer
 
 ```
-<COMMAND 1>
-<COMMAND 2>
+<COMMAND 1> sort -r india_stud.csv >ind.txt
+<COMMAND 2>head -n 3 ind.txt
 <COMMAND 3>
 ```
 4. Bottom 5 students from Pakistan based on the marks scored
 ```
 ANSWER
-```
+```83 Pakistan 5cf9c9be70765c6c741bd5ed
+17 Pakistan 5cf9c9be70765c6c741bd62b
+96 Pakistan 5cf9c9be70765c6c741bd5cd
+71 Pakistan 5cf9c9be70765c6c741bd64f
+81 Pakistan 5cf9c9be70765c6c741bd681
 
 Commands on how you got the answer
 
-```
-<COMMAND 1>
-<COMMAND 2>
+```sorted and created new file
+<COMMAND 1>less pak.csv
+<COMMAND 2>tail -n 5 pak.csv
 <COMMAND 3>
 ```
 
@@ -84,47 +90,48 @@ Clone the repo https://github.com/dwmkerr/hacker-laws inside `assignments/week1/
 1. Find the total number of commits done by the user with the name `Dave`
 
 ```
-ANSWER
+ANSWER 
+91
 ```
 
 Commands on how you got the answer
 
 ```
-<COMMAND 1>
-<COMMAND 2>
-<COMMAND 3>
+<COMMAND 1> grep Dave auth.txt
+<COMMAND 2> sort -i auth1.txt
+<COMMAND 3> wc -l auth1.txt
 ```
 
 2. Find the total no of commits done in the month of April
 
 ```
-ANSWER
+ANSWER 10
 ```
 Commands on how you got the answer
 
 ```
-<COMMAND 1>
-<COMMAND 2>
-<COMMAND 3>
+<COMMAND 1>grep Apr auth.txt
+<COMMAND 2>grep Apr auth.txt >auth1.txt
+<COMMAND 3>wc -l auth1.txt
 ```
 
 3. Find the total no of commits done in the year 2018
 
 ```
-ANSWER
+ANSWER 33
 ```
 Commands on how you got the answer
 
 ```
-<COMMAND 1>
-<COMMAND 2>
-<COMMAND 3>
+<COMMAND 1>grep 2018 auth.txt
+<COMMAND 2> grep 2018 auth.txt > dat.txt
+<COMMAND 3> wc -l dat.txt
 ```
 
 ## FSD.W1.1.D (20 min)
 
 - Clone the repo https://github.com/masai-school/full-stack-dev inside `~/repos` folder
 - Navigate to the folder `~/repos/full-stack-dev/`
-- Copy the `course/week_1/day_2/w1_day_2_assignments.md` file to the `test` repository which should be at `~/repos/test`
+- Copy the `course/week_1/day_1/w1_day_2_assignments.md` file to the `test` repository which should be at `~/repos/test`
 - Open the file `w1_day_2_assignments.md` in the text editor using GUI and fill all the answers
 - Sync your `test` repo online with the solutions
